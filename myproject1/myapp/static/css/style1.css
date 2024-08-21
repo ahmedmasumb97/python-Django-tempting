@@ -1,0 +1,27 @@
+body{
+    background-color: rgba(3, 124, 139, 0.623);
+    margin: 10px;
+    }
+
+
+    nav{
+        text-align: center; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    li{
+        display: inline-block;
+        text-align: center;
+    }
+    
+    a{
+            text-decoration: none;
+            font-size: 27px;
+        
+    }
+
+    img{
+        border: 5px solid gray;
+    }

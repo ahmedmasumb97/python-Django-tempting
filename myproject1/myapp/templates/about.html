@@ -1,0 +1,23 @@
+
+{% extends  "layout.html" %}
+
+
+{% block content %}
+
+<h2>{{  name  }}</h2>
+<h4> {{  content  }} </h4>
+{%load static%}
+<link rel="stylesheet" href="{%static 'css/style2.css'%}">
+<hr>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi fugiat alias cumque hic fuga blanditiis! Voluptate magnam dignissimos veniam in provident ratione unde a minima. Nostrum veritatis dicta aliquam quae fugit. Error possimus magni ipsa iusto eos voluptates eaque consequatur?</p>
+
+
+<img src="{% static 'images/img2.jpg' %}">
+
+
+
+    {% endblock %} 
+
+    {% block title %}
+    About page
+    {% endblock  %}
