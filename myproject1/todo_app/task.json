@@ -1,0 +1,45 @@
+[
+  {
+    "model": "todo_app.task",
+    "pk": 1,
+    "fields": {
+      "title": "Buy milk",
+      "description": "get 2l milk free 200ml milk",
+      "completed": false,
+      "created_at": "2024-08-23 8:20:30"
+    }
+  },
+
+  {
+    "model": "todo_app.task",
+    "pk": 2,
+    "fields": {
+      "title": "Buy vegtables",
+      "description": "vegatables is good for health",
+      "completed": false,
+      "created_at": "2024-08-23 9:20:30"
+    }
+  },
+
+  {
+    "model": "todo_app.task",
+    "pk": 3,
+    "fields": {
+      "title": "visit park hall",
+      "description": "you should visit park hall",
+      "completed": true,
+      "created_at": "2024-08-23 8:20:30"
+    }
+  },
+
+  {
+    "model": "todo_app.task",
+    "pk": 4,
+    "fields": {
+      "title": "Love country",
+      "description": "Bangladesh is beautiful country",
+      "completed": true,
+      "created_at": "2024-08-23 10:20:30"
+    }
+  }
+]

@@ -50,7 +50,7 @@ def  history(request):
 
 def experiment(request,person=None):
     if person is None:
-        person = "Guest"
+        person = "Hi! Guest"
         
     return render(request,'experiment.html',{"data":person})
 

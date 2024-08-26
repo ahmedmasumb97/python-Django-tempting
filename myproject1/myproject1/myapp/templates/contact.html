@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    nav{
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    li{
+        display: inline-block;
+        text-align: center;
+    }
+        a{
+            text-decoration: none;
+            font-size: 27px;
+        
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Protfolio of  Mohmmad masum</h1>
+    <hr>
+    <br>
+
+    <nav>
+        <li><a href="/app/home">Home</a></li>
+        <li><a href="/app/about">About</a></li>
+        <li><a href="/app/history">Histoy</a></li>
+        <li><a href="/app/allorders">Orders</a></li>
+    </nav>
+
+    <h2>Our contact</h2>
+    <address>
+        Phone: {{ phonenumber }},
+       email: {{ emailaddress }}
+       <br>
+        <small>
+            {% for profile in social_profile %}
+            <ul>
+                <li>
+                 <a href="#">   {{ profile | lower  }} </a>   
+                 {% comment %} temple filter | lower {% endcomment %}
+                </li>
+            </ul>
+            {% endfor %}
+        </small>
+
+        <h3>Our Location is
+
+            {% if hq == 'd' %}
+            <strong>Dhaka</strong>
+            {% elif hq == 'r'  %}
+            <strong>Rajshahi</strong>
+            {% elif hq == 'g' %}
+            <strong>Gazipur</strong>
+            {% else %}
+            <strong>Unkown place</strong>
+            {% endif %}
+
+        </h3>
+        
+    </address>
+    <h3>This is home page</h3>
+    <hr>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi fugiat alias cumque hic fuga blanditiis! Voluptate magnam dignissimos veniam in provident ratione unde a minima. Nostrum veritatis dicta aliquam quae fugit. Error possimus magni ipsa iusto eos voluptates eaque consequatur?</p>
+    
+</body>
+</html>

@@ -1,17 +1,13 @@
+{% extends "layout.html" %} {% block content %}
 
-    {% extends  "layout.html" %}
+<h2>{{ name }}</h2>
+<h4>{{ content }}</h4>
+<hr />
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi fugiat alias
+  cumque hic fuga blanditiis! Voluptate magnam dignissimos veniam in provident
+  ratione unde a minima. Nostrum veritatis dicta aliquam quae fugit. Error
+  possimus magni ipsa iusto eos voluptates eaque consequatur?
+</p>
 
-
-    {% block content %}
-
-    <h2>{{  name  }}</h2>
-    <h4> {{  content  }} </h4>
-    <hr>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi fugiat alias cumque hic fuga blanditiis! Voluptate magnam dignissimos veniam in provident ratione unde a minima. Nostrum veritatis dicta aliquam quae fugit. Error possimus magni ipsa iusto eos voluptates eaque consequatur?</p>
-    
-
-        {% endblock %} 
-
-        {% block title %}
-        Home page
-        {% endblock  %}
+{% endblock %} {% block title %} Home page {% endblock %}

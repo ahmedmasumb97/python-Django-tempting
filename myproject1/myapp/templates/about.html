@@ -1,23 +1,50 @@
+{% extends "layout.html" %} {% block content %}
 
-{% extends  "layout.html" %}
+<h2>{{ name }}</h2>
+<h4>{{ content }}</h4>
+{% load static %}
+<link rel="stylesheet" href="{%static 'css/style2.css'%}" />
+<hr />
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi fugiat alias
+  cumque hic fuga blanditiis! Voluptate magnam dignissimos veniam in provident
+  ratione unde a minima. Nostrum veritatis dicta aliquam quae fugit. Error
+  possimus magni ipsa iusto eos voluptates eaque consequatur?
+</p>
 
+<h3>Read book</h3>
+<embed src="{% static 'pdf/book.pdf' %}" style="width: 700px; height: 600px" />
 
-{% block content %}
+<br /><br />
 
-<h2>{{  name  }}</h2>
-<h4> {{  content  }} </h4>
-{%load static%}
-<link rel="stylesheet" href="{%static 'css/style2.css'%}">
-<hr>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi fugiat alias cumque hic fuga blanditiis! Voluptate magnam dignissimos veniam in provident ratione unde a minima. Nostrum veritatis dicta aliquam quae fugit. Error possimus magni ipsa iusto eos voluptates eaque consequatur?</p>
+<h3>Audio player</h3>
 
+<audio controls autoplay>
+  <source src="{% static 'audio/audio.mp3' %}" type="audio/ogg" />
 
-<img src="{% static 'images/img2.jpg' %}">
+  Your browser does not support the audio element.
+</audio>
 
+<br /><br />
 
+<h3>Video player</h3>
 
-    {% endblock %} 
+<video width="320" height="240" controls>
+  <source src="{% static 'video/video.mp4' %}" type="video/mp4" />
 
-    {% block title %}
-    About page
-    {% endblock  %}
+  Your browser does not support the video tag.
+</video>
+
+<br /><br />
+
+<h3>YouTube player</h3>
+
+<iframe width="560" height="315" src="{% static  "https://www.youtube.com/embed/RFGlNe-uv3s?si=yrT0um7Nf1l9ieMl" %}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br /><br />
+
+<img src="{% static 'images/img2.jpg' %}" />
+
+{% comment %} <embed src={% url 'pdf/book.pdf'
+%}'#toolbar=0&navpanes=0&scrollbar=0'width="300" height="200" frameborder="0">
+{% endcomment %} {% endblock %} {% block title %} About page {% endblock %}

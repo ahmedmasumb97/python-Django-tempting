@@ -21,6 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('app/',include('myapp.urls')),
     path('app/',include('orderapp.urls')),
+    path('task/',include('todo_app.urls')),
+  
     # path('order/',include('orderapp.urls')),
   
 ]
